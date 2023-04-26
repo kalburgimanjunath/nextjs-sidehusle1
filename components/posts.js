@@ -5,7 +5,7 @@ export default function Posts({ posts }) {
     return (
       <div className="lists-item">
         <>
-          <Link href={`./posts/${item.title}`}>
+          <Link href={`./posts/${item.id}`}>
             <div>{item.author}</div>
             <h4>{item.title}</h4>
             <div>{item.description}</div>

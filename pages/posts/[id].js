@@ -12,5 +12,23 @@ export default function index() {
   }, []);
   console.log(posts);
 
-  return <div>Post:{id}</div>;
+  return (
+    <div>
+      Post:{id}
+      <>
+        <div>
+          {posts &&
+            posts.length > 0 &&
+            posts.map((item) => {
+              return (
+                <div>
+                  {item.title} {item.author}
+                  {item.description}
+                </div>
+              );
+            })}
+        </div>
+      </>
+    </div>
+  );
 }
