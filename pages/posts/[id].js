@@ -9,7 +9,7 @@ export default function index() {
 
   useEffect(() => {
     setPosts(getAllPosts());
-  });
+  }, []);
 
   return <div>Post:{id}</div>;
 }
