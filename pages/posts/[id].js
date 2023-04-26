@@ -8,7 +8,7 @@ export default function index() {
   const { id } = router.query;
 
   useEffect(() => {
-    setPosts(getAllPosts());
+    // setPosts(getAllPosts());
   }, []);
 
   return <div>Post:{id}</div>;
