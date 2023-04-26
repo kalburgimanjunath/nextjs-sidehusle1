@@ -1,7 +1,14 @@
 const getAllPosts = async () => {
-  const allPosts = await fetch('./api/posts').then((res) => res.json());
-  (result) => result.json(result.posts);
+  const allPosts = await fetch('../api/posts')
+    .then((res) => res.json())
+    .then((result) => result.posts);
   return allPosts;
 };
-export const getUserById = () => {};
-export { getAllPosts };
+const getPostById = async (id) => {
+  const allPosts = await fetch('../api/posts')
+    .then((res) => res.json())
+    .then((result) => result.posts);
+  console.log(allPosts.filter((item) => item.id == id));
+  return allPosts.filter((item) => item.id !== id);
+};
+export { getAllPosts, getPostById };

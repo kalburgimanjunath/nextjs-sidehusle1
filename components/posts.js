@@ -21,8 +21,8 @@ export default function Posts({ posts }) {
   return (
     <div className="lists">
       {posts &&
-        posts.map((item) => {
-          return <PostItem item={item} />;
+        posts.map((item, index) => {
+          return <PostItem key={index} item={item} />;
         })}
     </div>
   );
