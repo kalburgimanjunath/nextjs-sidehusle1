@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react';
 
 import { getAllPosts } from '../api/services/posts.services';
 export default function index() {
+  const [posts, setPosts] = useState([]);
   const router = useRouter();
   const { id } = router.query;
-  const getAll = async () => {
-    return await getAllPosts();
-  };
-  console.log(getAll);
+
+  useEffect(() => {
+    setPosts(getAllPosts());
+  });
 
   return <div>Post:{id}</div>;
 }
