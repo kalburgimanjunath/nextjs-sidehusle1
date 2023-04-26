@@ -1,0 +1,16 @@
+.navbar-top {
+  display: flex;
+  box-shadow: inset 0 -1px 0 0 #303030;
+}
+.navbar-start {
+  width: 50%;
+  padding: 20px 10px;
+}
+.navbar-end {
+  width: 50%;
+}
+.navbar-end ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
