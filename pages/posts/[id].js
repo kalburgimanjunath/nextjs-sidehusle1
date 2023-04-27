@@ -8,9 +8,16 @@ export default function index() {
   const { id } = router.query;
 
   const fetchPosts = async () => {
-    await fetch('/api/posts')
+    const results = await fetch('/api/posts')
       .then((res) => res.json())
-      .then((result) => setPosts(result.posts));
+      .then((result) => result.posts);
+
+    return setPosts(
+      results &&
+        results.filter((item) => {
+          return item.id == id;
+        })
+    );
   };
   useEffect(() => {
     fetchPosts();
@@ -22,7 +29,7 @@ export default function index() {
         <div>
           {posts && posts.length > 0 ? (
             <div>
-              {post.map((item) => {
+              {posts.map((item) => {
                 return <div>{item.title}</div>;
               })}
             </div>

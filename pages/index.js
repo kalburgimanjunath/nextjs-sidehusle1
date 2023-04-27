@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import { Header, Footer, Sidebar, Widgets, Posts } from '../components/';
+
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
