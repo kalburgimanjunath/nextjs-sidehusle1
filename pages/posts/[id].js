@@ -6,21 +6,10 @@ export default function index() {
   const [posts, setPosts] = useState([]);
   const router = useRouter();
   const { id } = router.query;
-  const getPostRecords = () => {
-    return setPosts(getPostById(id));
-  };
   useEffect(() => {
-    if (id) {
-      getPostRecords();
-    }
-  }, []);
-  const RenderPosts =
-    posts &&
-    posts.length > 0 &&
-    posts.map((item) => {
-      return <div>{item.title}</div>;
-    });
-
+    // const getAllData = getAllPosts();
+    // console.log(getAllData);
+  });
   return (
     <div>
       Post:{id}
@@ -28,7 +17,9 @@ export default function index() {
         <div>
           {posts && posts.length > 0 ? (
             <div>
-              <RenderPosts />
+              {post.map((item) => {
+                return <div>{item.title}</div>;
+              })}
             </div>
           ) : (
             <div>Loading...</div>
