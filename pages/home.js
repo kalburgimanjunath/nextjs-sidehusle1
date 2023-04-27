@@ -1,6 +1,7 @@
-import { useEarthoOne } from '@eartho/one-client-react';
-
-export default function Home() {
+// import { useEarthoOne } from '@eartho/one-client-react';
+import { Header, Footer, Sidebar, Widgets, Posts } from '../components/';
+import styles from '../styles/Home.module.css';
+export default function Home({ posts, users }) {
   // const { isLoading, isConnected, error, user, connectWithPopup, logout } =
   //   useEarthoOne();
   // useEffect(() => {});
@@ -32,7 +33,7 @@ export default function Home() {
   //   );
   // }
   return (
-    <div>
+    <div className={styles.container}>
       <Sidebar />
       <Posts posts={posts} />
       <Widgets title="Popular Publishers" type="user" lists={users} />

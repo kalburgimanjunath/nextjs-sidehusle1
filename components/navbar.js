@@ -16,6 +16,18 @@ export default function Navbar() {
           <li>
             <Link href="/contribute">Contribute your Ideas</Link>
           </li>
+          <li>
+            <Link href="/profile/edit-profile">Edit Profile</Link>
+          </li>
+          <li>
+            <Link href="/public-profile/">Profile</Link>
+          </li>
+          <li>
+            <Link href="/bookmarks">Bookmarks</Link>
+          </li>
+          <li>
+            <Link href="/logout">Log Out</Link>
+          </li>
         </ul>
       </div>
     </div>
