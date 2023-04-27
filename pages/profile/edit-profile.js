@@ -14,6 +14,10 @@ export default function index() {
         <Input type="text" label="headline" />
         <Input type="text" label="about you" />
       </div>
+      <footer>
+        <button className="btn btn-primary">Save</button>
+        <button className="btn btn-default">Cancel</button>
+      </footer>
     </div>
   );
 }

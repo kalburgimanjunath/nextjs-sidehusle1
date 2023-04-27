@@ -18,7 +18,7 @@ export default function Sidebar() {
         categories.map((item, index) => {
           return (
             <div className="lists-item" key={index}>
-              <Link href={`./category/${item}`}>{item}</Link>
+              <Link href={`../category/${item}`}>{item}</Link>
             </div>
           );
         })}

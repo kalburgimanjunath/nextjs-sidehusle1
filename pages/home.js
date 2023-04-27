@@ -34,7 +34,7 @@ export default function Home({ posts, users }) {
   // }
   return (
     <div className={styles.container}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Posts posts={posts} />
       <Widgets title="Popular Publishers" type="user" lists={users} />
     </div>
