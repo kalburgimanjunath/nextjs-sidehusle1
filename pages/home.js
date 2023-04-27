@@ -1,4 +1,5 @@
 import { useEarthoOne } from '@eartho/one-client-react';
+
 export default function Home() {
   const { isLoading, isConnected, error, user, connectWithPopup, logout } =
     useEarthoOne();
@@ -13,9 +14,9 @@ export default function Home() {
     return (
       <div>
         Hello {user.displayName}{' '}
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
+        {/* <button onClick={() => logout({ returnTo: window.location.origin })}>
           Log out
-        </button>
+        </button> */}
       </div>
     );
   } else {
