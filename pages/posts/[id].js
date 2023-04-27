@@ -6,9 +6,14 @@ export default function index() {
   const [posts, setPosts] = useState([]);
   const router = useRouter();
   const { id } = router.query;
+
+  const fetchPosts = async () => {
+    await fetch('/api/posts')
+      .then((res) => res.json())
+      .then((result) => setPosts(result.posts));
+  };
   useEffect(() => {
-    // const getAllData = getAllPosts();
-    // console.log(getAllData);
+    fetchPosts();
   });
   return (
     <div>
