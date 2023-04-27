@@ -9,7 +9,7 @@ export default function index() {
 
   useEffect(() => {
     setPosts(getPostById(id));
-  }, []);
+  }, [id]);
   console.log(posts);
 
   return (

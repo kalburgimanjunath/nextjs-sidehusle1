@@ -5,10 +5,12 @@ const getAllPosts = async () => {
   return allPosts;
 };
 const getPostById = async (id) => {
+  console.log(id);
   const allPosts = await fetch('../api/posts')
     .then((res) => res.json())
     .then((result) => result.posts);
-  console.log(allPosts.filter((item) => item.id == id));
+  console.log(allPosts);
+  // console.log(allPosts.filter((item) => item.id == id));
   return allPosts.filter((item) => item.id !== id);
 };
 export { getAllPosts, getPostById };
