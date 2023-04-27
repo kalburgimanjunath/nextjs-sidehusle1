@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
       <button
         className="btn btn-outline-success"
         id="login"
-        onClick={() => connectWithPopup({ access_id: 'YOUR_EARTHO_ACCESS_ID' })}
+        onClick={() => connectWithPopup({ access_id: 'wAXNIrrIkProRJubXNta' })}
       >
         Log in
       </button>
