@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Posts({ posts }) {
   const PostItem = ({ item }) => {
     return (
-      <div className="lists-item">
+      <div className="lists-item post">
         <>
           <Link href={`./posts/${item.id}`}>
             <div>{item.author}</div>
@@ -19,7 +19,7 @@ export default function Posts({ posts }) {
     );
   };
   return (
-    <div className="lists">
+    <div className="lists posts">
       {posts &&
         posts.map((item, index) => {
           return <PostItem key={index} item={item} />;
