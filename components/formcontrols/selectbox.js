@@ -1,4 +1,4 @@
-export default function SelectBox() {
+export default function Selectbox() {
   return (
     <div>
       <select>
