@@ -10,6 +10,7 @@ export default (req, res) => {
       description:
         'lorem pasam lorem pasam lorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasam',
       author: 1,
+      url: 'https://picsum.photos/seed/picsum/200/300',
       created_at: '10-10-2023',
     },
     {
@@ -18,6 +19,7 @@ export default (req, res) => {
       description:
         'lorem pasam lorem pasam lorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasamlorem pasam',
       author: 1,
+      url: 'https://picsum.photos/seed/picsum/200/300',
       created_at: '10-10-2023',
     },
   ];

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 export default function Posts({ posts }) {
   const PostItem = ({ item }) => {
     return (
@@ -7,6 +8,15 @@ export default function Posts({ posts }) {
         <>
           <Link href={`./posts/${item.id}`}>
             <div>{item.author}</div>
+            <div>
+              <Image
+                loader={() => item.url}
+                src={item.url}
+                width="200"
+                height="200"
+              />
+            </div>
+
             <h4>{item.title}</h4>
             <div>{item.description}</div>
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/logo.png';
-export default function Navbar() {
+import logo from '../assets/logo.PNG';
+export default function Navbar({ session }) {
   return (
     <div className="navbar-top">
       <div className="navbar-start">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link href="/bookmarks">Bookmarks</Link>
           </li>
           <li>
-            <Link href="/logout">Log Out</Link>
+            <Link href="/login">Login</Link>
           </li>
         </ul>
       </div>

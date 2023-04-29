@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import { Header, Footer, Sidebar, Widgets, Posts } from '../components/';
 import Home from './home';
-// import { EarthoOneProvider } from '@eartho/one-client-react';
+import { EarthoOneProvider } from '@eartho/one-client-react';
 
 export default function Index() {
   const [users, setUsers] = useState([]);

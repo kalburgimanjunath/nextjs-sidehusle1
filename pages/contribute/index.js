@@ -9,7 +9,7 @@ export default function index() {
 
       <div>
         <Formik
-          initialValues={{ title: 'hello world' }}
+          initialValues={{ title: '' }}
           validate={(values) => {
             const errors = {};
             if (!values.title) {
@@ -62,6 +62,7 @@ export default function index() {
                 value={values.title}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                placeholder="title"
               />
               <ErrorMessage name="title" component="div" />
 
@@ -69,20 +70,32 @@ export default function index() {
                 type="text"
                 name="description"
                 value={values.description}
+                placeholder="description"
               />
               <ErrorMessage name="description" component="div" />
 
-              <Field type="text" name="content" value={values.content} />
+              <Field
+                type="text"
+                name="content"
+                value={values.content}
+                placeholder="content"
+              />
               <ErrorMessage name="content" component="div" />
 
-              <Field type="text" name="tags" value="tags" value={values.tags} />
+              <Field
+                type="text"
+                name="tags"
+                value="tags"
+                value={values.tags}
+                placeholder="tags"
+              />
               <ErrorMessage name="tags" component="div" />
 
               <Field
                 type="text"
                 name="category"
-                value="category"
                 value={values.category}
+                placeholder="category"
               />
               <ErrorMessage name="category" component="div" />
 
