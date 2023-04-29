@@ -4,4 +4,3 @@ export const getAllUsers = async () => {
   return allUsers;
 };
 export const getUserById = () => {};
-export { getAllUsers };

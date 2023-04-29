@@ -3,4 +3,3 @@ export const getAllBanners = async () => {
   (result) => result.json(result.banners);
   return allUsers;
 };
-export { getAllBanners };
