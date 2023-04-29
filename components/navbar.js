@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 export default function Navbar({ session }) {
   return (
     <div className="navbar-top">
       <div className="navbar-start">
         <Link href="/">
-          <Image src={logo} width={70} height={70} alt="logo" />
+          Logo
+          {/* <Image src={logo} width={70} height={70} alt="logo" /> */}
         </Link>
       </div>
       <div className="navbar-end">
