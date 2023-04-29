@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../assets/logo.PNG';
+import logo from '../assets/logo.png';
 export default function Navbar({ session }) {
   return (
     <div className="navbar-top">
