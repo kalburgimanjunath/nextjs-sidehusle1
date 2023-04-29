@@ -14,6 +14,7 @@ export default function Posts({ posts }) {
                 src={item.url}
                 width="200"
                 height="200"
+                alt=""
               />
             </div>
 
