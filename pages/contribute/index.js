@@ -1,6 +1,12 @@
 import { Input } from '../../components/';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 export default function index() {
+  const [posts, setPosts] = useState();
+  // const fetchRecords = ()=>{
+  //   fetch('https://api.airtable.com/v0/{posts}/{allposts}')
+  // }
+  useEffect(() => {});
   return (
     <div>
       <header>
@@ -14,28 +20,18 @@ export default function index() {
             const errors = {};
             if (!values.title) {
               errors.title = 'Required';
-            } else {
-              errors.title = 'Invalid title';
             }
             if (!values.description) {
               errors.description = 'Required';
-            } else {
-              errors.description = 'Invalid description';
             }
             if (!values.content) {
               errors.content = 'Required';
-            } else {
-              errors.content = 'Invalid content';
             }
             if (!values.tags) {
               errors.tags = 'Required';
-            } else {
-              errors.tags = 'Invalid tags';
             }
             if (!values.category) {
               errors.category = 'Required';
-            } else {
-              errors.category = 'Invalid category';
             }
             return errors;
           }}
