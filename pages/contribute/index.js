@@ -51,7 +51,7 @@ export default function index() {
             handleSubmit,
             isSubmitting,
           }) => (
-            <Form>
+            <Form className="mx-auto">
               <Field
                 type="text"
                 name="title"
