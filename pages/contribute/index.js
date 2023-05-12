@@ -3,10 +3,33 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 export default function index() {
   const [posts, setPosts] = useState();
-  // const fetchRecords = ()=>{
-  //   fetch('https://api.airtable.com/v0/{posts}/{allposts}')
-  // }
-  useEffect(() => {});
+  const fetchRecords = () => {
+    fetch(
+      'https://api.airtable.com/v0/appkjlwWrVqVpSC7i/allposts?api_key=keyeNXyxxuuYJY19w'
+    )
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  };
+  const saveData = (data) => {
+    const url = `https://api.airtable.com/v0/appkjlwWrVqVpSC7i/allposts`;
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'multipart/json',
+        Authorization: 'Bearer keyeNXyxxuuYJY19w',
+      },
+      body: JSON.stringify(data),
+      typecast: true,
+    };
+    console.log(requestOptions);
+    fetch(url, requestOptions)
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchRecords();
+  });
   return (
     <div>
       <header>
@@ -37,7 +60,8 @@ export default function index() {
           }}
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+              // alert(JSON.stringify(values, null, 2));
+              saveData({ fields: values });
               setSubmitting(false);
             }, 400);
           }}
