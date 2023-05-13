@@ -5,7 +5,7 @@ export default function JobListing({ jobs }) {
       <>
         <div>
           <h6>{item.job_title}</h6> at {item.company_name}
-        </div>        
+        </div>
         <div>{item.company_address}</div>
         <div>{item.location}</div>
         <div>{item.notice_period}</div>
