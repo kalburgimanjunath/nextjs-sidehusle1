@@ -3,4 +3,6 @@ export const getAllJobs = async () => {
   (result) => result.json(result.jobs);
   return allJobs;
 };
-export const getJobById = () => {};
+export const getJobById = () => {
+  return;
+};
