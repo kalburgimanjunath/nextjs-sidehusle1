@@ -7,5 +7,6 @@
 -user profiles management
 -publications from users
 -comments reactions and rand the publications from users.
+-job listing,remote,office,girls,partime
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/nextjs-c6ywuj)

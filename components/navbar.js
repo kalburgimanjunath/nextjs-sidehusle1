@@ -16,6 +16,9 @@ export default function Navbar({ session }) {
             <Link href="/">Home</Link>
           </li>
           <li>
+            <Link href="/jobs">jobs</Link>
+          </li>
+          <li>
             <Link href="/ideas">Popular Ideas</Link>
           </li>
           <li>
